@@ -26,7 +26,7 @@ import numpy as np
 
 # COMMAND ----------
 
-url = ("jdbc:postgresql://metpoliceflexserver.postgres.database.azure.com:5432/postgres"+ 
+url = ("jdbc:postgresql://servername.postgres.database.azure.com:5432/postgres"+ 
     "?tcpKeepAlive=true&prepareThreshold=-1&binaryTransfer=true&defaultRowFetchSize=10000")
 
 sqlText = """(SELECT *,ST_AsText(point_geom) as point_g,ST_AsText(line_geom) as line_g,ST_AsText(ST_LineMerge(line_geom)) as merged_line FROM tbl_line_vs_shooting_point ) as tbl_line_vs_shooting_point"""
